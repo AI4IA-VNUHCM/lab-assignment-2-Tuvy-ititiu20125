@@ -14,12 +14,26 @@ ______________________________________
 #include <stdlib.h>
 #include <math.h>
 
-int main(int argc, char *argv[]) {
+int main(int argc, char *argv[])
+{
 	//testing variable, applying it to your algorithm for auto-evaluating
 	float distance = atof(argv[1]);
 	int result;
-	//Your codes here
-	
+	printf("Enter distance in kilometer:");
+	scanf("%f",&distance);
+	// scanf("%d",&result);
+	if (distance < 2)
+	{
+		result = 15000;
+	}
+	else if (2 < distance && distance < 30)
+	{
+		result = 15000 + (distance - 2)*4*2000;
+	}
+	else if (distance > 30)
+	{
+		result = 15000 + 28*4*2000 + 5000 * (distance - 30);
+	}
 	printf("%d", result);
 	return 0;
 }

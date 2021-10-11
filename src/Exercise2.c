@@ -3,7 +3,7 @@
 which satisfies the following:
 	if n is odd, factorial = 1 * 3 * 5 * … * n
 	if n is even, factorial = 2 * 4 * 6 * … * n
-Ex:
+Ex: 
 ______________________________________
 | Input: 11                          |
 | Output: 10395                      |
@@ -13,13 +13,34 @@ ______________________________________
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-
-int main(int argc, char *argv[]) {
+int main(int argc, char *argv[])
+{
 	//testing variable, applying it to your algorithm for auto-evaluating
 	int n = atoi(argv[1]);
-	int result;
-	//Your codes here
-	
+	int result = 1;
+	printf("Enter number: ");
+	scanf("%d", &n);
+	if (n % 2 == 0)
+	{
+		for (int i = 1; i <= n; i++)
+		{
+			if (i % 2 == 0)
+			{
+				result = result * i;
+			}
+		}
+	}
+	else
+	{
+		for (int i = 1; i <= n; i++)
+		{
+			if (i % 2 != 0)
+			{
+				result = result * i;
+			}
+		}
+	}
+
 	printf("%d", result);
 	return 0;
 }
