@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 	//testing variable, applying it to your algorithm for auto-evaluating
 	float distance = atof(argv[1]);
 	int result;
-	printf("Enter distance in kilometer:");
+	printf("Enter distance in kilometer: ");
 	scanf("%f",&distance);
 	// scanf("%d",&result);
 	if (distance < 2)
